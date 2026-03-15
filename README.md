@@ -2,12 +2,12 @@
 
 Informations pertinentes à scraper sur le site de vente des camions
 
+- Description
 - Année de mise en circulation
 - Marque
 - Kilométrage
 - Prix
 - Modèle
-- Type de camion (tracteur, benne, fourgon…)
 - Localisation du vendeur
 - Pays
 - Photos du camion
@@ -16,5 +16,5 @@ Informations pertinentes à scraper sur le site de vente des camions
 - puissance moteur
 - Boite de vitesse
 - Type d'énergie
-- Carrosserie
 - Etat
+- Essieux

@@ -18,3 +18,4 @@ Informations pertinentes à scraper sur le site de vente des camions
 - Type d'énergie
 - Etat
 - Essieux
+- Réf. client :

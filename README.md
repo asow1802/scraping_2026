@@ -19,3 +19,4 @@ Informations pertinentes à scraper sur le site de vente des camions
 - Etat
 - Essieux
 - Réf. client :
+# Etapes suivies pour scraper 

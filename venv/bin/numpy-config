@@ -1,0 +1,8 @@
+#!/bin/sh
+'''exec' "/home/layedev/Documents/miashs2026/MQME2026_SEMESTRE2/web analyst/scraping_2026/venv/bin/python3" "$0" "$@"
+' '''
+import sys
+from numpy._configtool import main
+if __name__ == '__main__':
+    sys.argv[0] = sys.argv[0].removesuffix('.exe')
+    sys.exit(main())

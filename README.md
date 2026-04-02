@@ -274,7 +274,7 @@ Aperçu des 5 premières lignes du DataFrame final :
 | VO25-1984 | Tracteur produits dangereux Renault | 74 km | 12/06/2024 | Renault | Prix sur demande | 480 | Neuf |
 
 ---
-### Nettoyage des données 
+## 9. Nettoyage des données 
 # Projet de Nettoyage de Données - Marché Poids Lourds
 
 Ce projet vise à nettoyer et harmoniser les données de véhicules (tracteurs routiers) provenant de différentes sources de vente et de location.

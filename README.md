@@ -19,6 +19,7 @@
 6. [Fichiers de sortie](#6-fichiers-de-sortie)
 7. [Limitations connues et points d'attention](#7-limitations-connues-et-points-dattention)
 8. [Exemple de résultat](#8-exemple-de-résultat)
+9. [Nettoyage des données](#Travail sur les données collectées)
 
 ---
 
@@ -273,5 +274,41 @@ Aperçu des 5 premières lignes du DataFrame final :
 | VO25-1984 | Tracteur produits dangereux Renault | 74 km | 12/06/2024 | Renault | Prix sur demande | 480 | Neuf |
 
 ---
+### Nettoyage des données 
+# Projet de Nettoyage de Données - Marché Poids Lourds
+
+Ce projet vise à nettoyer et harmoniser les données de véhicules (tracteurs routiers) provenant de différentes sources de vente et de location.
+
+## Sources de données
+Le projet traite quatre fichiers principaux :
+- `Achat.csv` : Véhicules en vente directe.
+- `LocationParMois.csv` : Véhicules en location avec tarifs mensuels.
+- `PrixSurDemande.csv` : Véhicules en vente (prix non affiché).
+- `PrixLocationSurDemande.csv` : Véhicules en location (prix non affiché).
+
+## Étapes de nettoyage
+Le traitement automatisé via Python (Pandas) a permis de réaliser les opérations suivantes :
+
+### 1. Typage et Conversion
+- **Kilométrage** : Suppression du suffixe "km" et des espaces, conversion en entier.
+- **Poids (Vide/PTC)** : Extraction des valeurs numériques et conversion en tonnes (float).
+- **Dates** : Conversion des dates de première immatriculation au format `datetime`.
+- **Prix** : Conversion en format numérique (NaN pour les mentions textuelles "sur demande").
+
+### 2. Normalisation Textuelle
+- Nettoyage des colonnes `Marque`, `Modèle`, `Energie`, and `Localisation` (suppression des espaces blancs).
+- Standardisation de la colonne `Etat` (Occasion/Neuf).
+
+### 3. Qualité des données
+- **Déduplication** : Suppression des doublons basée sur la référence client unique.
+- **Nettoyage des colonnes** : Suppression de la colonne `Photo` (non nécessaire pour l'analyse).
+- **Indicateurs** : Ajout d'une colonne `Prix_connu` pour faciliter le filtrage lors de l'analyse marketing.
+
+## Fichiers générés
+Le script produit quatre fichiers nettoyés :
+- `Achat_clean.csv`
+- `Location_clean.csv`
+- `PrixSurDemande_clean.csv`
+- `PrixLocationSurDemande_clean.csv`
 
 *Documentation générée à partir du notebook `Code_Scraping_Groupe4.ipynb` — Groupe 4*

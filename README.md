@@ -19,7 +19,7 @@
 6. [Fichiers de sortie](#6-fichiers-de-sortie)
 7. [Limitations connues et points d'attention](#7-limitations-connues-et-points-dattention)
 8. [Exemple de résultat](#8-exemple-de-résultat)
-9. [Exemple de résultat](#9-Nettoyage-de-données)
+9. [Nettoyage des Données](#9-Nettoyage-de-données)
 
 ---
 

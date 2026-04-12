@@ -169,7 +169,6 @@ Les annonces présentent quatre formats de prix distincts. Le code crée un Data
 | `PrixLocationSurDemande` | Contient `"Tarif de location sur demande"` | Location à tarif non affiché |
 | `Achat` | Aucune des conditions ci-dessus | Prix d'achat exprimé en euros |
 
-> ⚠️ **Avertissement** : La cellule de segmentation contient une erreur de syntaxe à la ligne de nettoyage du prix dans `Achat` (mélange de `str.extract` et `replace`). Cette ligne doit être corrigée avant exécution.
 
 ---
 

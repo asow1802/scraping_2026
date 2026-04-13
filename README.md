@@ -224,40 +224,10 @@ Voici la liste complète des 17 champs extraits pour chaque annonce :
 
 ---
 
-## 7. Limitations connues et points d'attention
-
-### Erreur de syntaxe à corriger
-
 La ligne suivante dans la cellule de segmentation est incorrecte et empêchera l'exécution :
 
 
-# ✅ Correction suggérée
-Achat["Prix"] = Achat["Prix"].replace(r"[^\d]", "", regex=True)
-```
-
-### Avertissement `SettingWithCopyWarning`
-
-Les affectations sur les sous-DataFrames (`LocationParMois["Prix"] = ...`) génèrent un avertissement pandas. Pour l'éviter, utiliser `.loc` :
-
-```python
-LocationParMois.loc[:, "Prix"] = LocationParMois["Prix"].replace(r"[^\d]", "", regex=True)
-```
-
-### Longueurs de colonnes incohérentes
-
-Certaines annonces peuvent ne pas afficher tous les champs (ex. pas de photo, pas de kilométrage). Cela peut provoquer des colonnes de longueurs différentes lors de la construction du DataFrame. Il est conseillé de vérifier avec `df.shape` et de gérer les valeurs manquantes avec `pd.DataFrame.from_dict(data, orient='index').T` si nécessaire.
-
-### Dépendance à la structure HTML du site
-
-Si le site modifie sa structure HTML (classes CSS, organisation des `<td>`), le scraper peut cesser de fonctionner ou retourner des données vides. Une vérification périodique est recommandée.
-
-### Durée d'exécution
-
-Le script a parcouru 475 pages lors de l'exécution documentée. Avec une pause de 0,5 s par page, cela représente environ **4 à 8 minutes** d'exécution selon la connexion.
-
----
-
-## 8. Exemple de résultat
+## 7. Exemple de résultat
 
 Aperçu des 5 premières lignes du DataFrame final :
 
@@ -270,7 +240,7 @@ Aperçu des 5 premières lignes du DataFrame final :
 | VO25-1984 | Tracteur produits dangereux Renault | 74 km | 12/06/2024 | Renault | Prix sur demande | 480 | Neuf |
 
 ---
-## 9. Nettoyage des données 
+## 8. Nettoyage des données 
 # Projet de Nettoyage de Données - Marché Poids Lourds
 
 Ce projet vise à nettoyer et harmoniser les données de véhicules (tracteurs routiers) provenant de différentes sources de vente et de location.
